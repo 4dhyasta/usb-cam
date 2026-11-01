@@ -118,7 +118,7 @@ final class Streamer: NSObject, ObservableObject, AVCaptureVideoDataOutputSample
         if !session.outputs.contains(output) {
             output.alwaysDiscardsLateVideoFrames = true
             output.videoSettings = [kCVPixelBufferPixelFormatTypeKey as String:
-                                        kCVPixelFormatType_420YpCbCrBiPlanarVideoRange]
+                                        kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange]
             output.setSampleBufferDelegate(self, queue: queue)
             if session.canAddOutput(output) { session.addOutput(output) }
         }
