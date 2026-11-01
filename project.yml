@@ -1,0 +1,26 @@
+name: USBCam
+options:
+  bundleIdPrefix: com.keenan
+  deploymentTarget:
+    iOS: "15.0"
+targets:
+  USBCam:
+    type: application
+    platform: iOS
+    sources: [App]
+    info:
+      path: Config/Info.plist
+      properties:
+        CFBundleDisplayName: USB Cam
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationLandscapeRight
+          - UIInterfaceOrientationLandscapeLeft
+        NSCameraUsageDescription: The camera is streamed to your PC over USB.
+        NSLocalNetworkUsageDescription: Used to send video to your PC over the USB cable.
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.keenan.usbcam
+        SWIFT_VERSION: "5.0"
+        TARGETED_DEVICE_FAMILY: "1"
+        CODE_SIGNING_ALLOWED: "NO"
